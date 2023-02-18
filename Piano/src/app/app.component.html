@@ -1,0 +1,22 @@
+<H1>App Piano</H1>
+
+<div class = "row">
+  <div class = "col-lg-4">
+    <div class="list-group">
+
+      <a href="#" (click)="aplicarSonido(1)" class="list-group-item list-group-item-action">Do</a>
+      <a href="#" (click)="aplicarSonido(2)" class="list-group-item list-group-item-action list-group-item-primary">Re</a>
+      <a href="#" (click)="aplicarSonido(3)" class="list-group-item list-group-item-action list-group-item-secondary">Mi</a>
+      <a href="#" (click)="aplicarSonido(4)" class="list-group-item list-group-item-action list-group-item-success">Fa</a>
+      <a href="#" (click)="aplicarSonido(5)" class="list-group-item list-group-item-action list-group-item-danger">So</a>
+      <a href="#" (click)="aplicarSonido(6)" class="list-group-item list-group-item-action list-group-item-warning">La</a>
+      <a href="#" (click)="aplicarSonido(7)" class="list-group-item list-group-item-action list-group-item-info">Si</a>
+    </div>
+  </div>
+</div>
+
+<audio controls>
+  <source src = "../assets/audio/do-80236.mp3"
+  type = "audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
