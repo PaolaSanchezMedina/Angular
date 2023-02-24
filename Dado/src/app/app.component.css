@@ -1,0 +1,15 @@
+img
+{
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+img.yo
+{
+    width: 100px;
+    height: 200px;
+    margin: 30px;
+}
