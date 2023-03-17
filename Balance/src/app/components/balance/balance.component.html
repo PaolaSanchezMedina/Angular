@@ -1,1 +1,75 @@
-<p>balance works!</p>
+<div class="container mt-5"> 
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body"> 
+                    <div class="text-center mb-2">
+                        <span class=" fw-semibold ms-50px" style="color: chocolate; font-size: 150%;">Añadir movimiento</span>
+                    </div>
+                    <form [formGroup]="movForm" (ngSubmit)="agregarMovimiento()">
+                        <label>Movimiento</label>
+                        <select class="form-select" formControlName="movimiento">
+                            <option selected>Opciones</option>
+                            <option>Activo</option>
+                            <option>PasivoCapital</option>
+                          </select>
+                        <label>Cuenta</label>
+                        <input type="text" class="form-control" formControlName="cuenta" placeholder="Ej: Auto">
+                        <label>Monto</label>
+                        <input type="number" class="form-control" formControlName="monto">
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="submit" class="btn btn-warning text-light fw-semibold" style="width: 100px;">Añadir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5">
+    <form [formGroup]="movForm" (ngSubmit)="actualizarBalance()">
+        <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-warning text-light fw-semibold" style="width: 300px;">Actualizar Balance</button>
+        </div>
+        <h5 class="text-center mt-3">
+            <span class="text-light"> {{ debe }} -> Activos </span>
+            <span class="text-light"> = </span>
+            <span class="text-light"> {{ haber }} -> Pasivos + Capital</span> 
+        </h5>
+        <h5 class="text-center mt-3">
+            <span class="text-light"> {{ balance }} </span>
+        </h5>
+    </form>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center mb-2">
+                        <span class=" fw-semibold ms-50px" style="color: chocolate; font-size: 150%;">Movimientos</span>
+                    </div>
+                    <table class="table table-hover table-warning">
+                        <thead>
+                          <tr><th scope="col">Movimiento</th>
+                            <th scope="col">Cuenta</th>
+                            <th scope="col">Monto</th>
+                            <th scope="col">Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let movimiento of listMovimientos ; let i = index">
+                                <td>{{ movimiento.movimiento }}</td>
+                                <td>{{ movimiento.cuenta }}</td>
+                                <td>{{ movimiento.monto }}</td>
+                                <td>
+                                <span (click)="eliminarMovimiento (i)"><i class="fas fa-solid fa-square-xmark text-danger"></i></span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

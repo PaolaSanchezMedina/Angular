@@ -1,3 +1,6 @@
+*{
+    font-family: 'Sono', sans-serif;
+}
 body{
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../src/assets/img/fondo.jpg);
     background-size: cover;

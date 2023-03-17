@@ -37,6 +37,8 @@ agregarTarea()
   this.nombreTarea="";
   localStorage.setItem(this.keyStorage, JSON.stringify(this.listTareas));
 }
+
+
 eliminarTarea(index: number): void
 {
   this.listTareas.splice(index,1);
