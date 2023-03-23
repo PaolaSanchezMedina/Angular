@@ -46,7 +46,7 @@ eliminarTarea(index: number): void
 }
 actualizarTarea(tareas: Tarea, index: number)
 {
-  this.listTareas[index].estado = true;
+  this.listTareas[index];
   localStorage.setItem(this.keyStorage, JSON.stringify(this.listTareas));
 }
 }

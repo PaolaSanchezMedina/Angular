@@ -18,6 +18,7 @@ export class BalanceComponent {
   totalPC: number = 0;
   haber: number = 0;
   debe: number = 0;
+  clave: number = 100;
   balance: string = 'Balance';
 
   constructor(private mvt: FormBuilder){
@@ -36,25 +37,36 @@ export class BalanceComponent {
     else{
       this.listMovimientos = JSON.parse(localStorageItem);
     }
-  }
+  } 
 
   agregarMovimiento(){ 
     const mov: movimiento = {
     movimiento: this.movForm.get('movimiento')?.value,
     cuenta: this.movForm.get('cuenta')?.value,
-    monto: this.movForm.get('monto')?.value
-    }
+    monto: this.movForm.get('monto')?.value,
+    activosTotal: this.totalA,
+    pasivosCTotal: this.totalPC,
+    debe: this.debe,
+    haber: this.haber,
+    clave: this.clave
+    } 
+    
+    this.clave = this.clave + 100
+
     //Agregar el objeto al arreglo
     this.listMovimientos.push(mov);
     //Guardar en local storage
     localStorage.setItem(this.keyStorage, JSON.stringify(this.listMovimientos));
+
   }
+ 
   eliminarMovimiento(index: number): void 
   {
     this.listMovimientos.splice(index,1);
     localStorage.setItem(this.keyStorage, JSON.stringify(this.listMovimientos));
   }
-  actualizarBalance(){ 
+
+  actualizarBalance(){
     if(this.movForm.get('movimiento')?.value==='Activo'){
       this.activos = this.movForm.get('monto')?.value;
       this.totalA = this.totalA +  this.activos;
@@ -63,8 +75,12 @@ export class BalanceComponent {
       this.pasivos = this.movForm.get('monto')?.value;
       this.totalPC = this.totalPC +  this.pasivos;
     }
+
     this.debe = this.totalA;
     this.haber = this.totalPC;
+
+    localStorage.setItem(this.keyStorage, JSON.stringify(this.listMovimientos));
+
     if(this.debe===this.haber){
       this.balance="Balance cuadra"
     }else{
