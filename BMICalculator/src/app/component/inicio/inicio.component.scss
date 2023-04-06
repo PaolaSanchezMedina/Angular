@@ -1,0 +1,62 @@
+
+.titulo{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.fondoItem{
+    background-color: rgb(255, 147, 223);
+    height: 130px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.btn-color{
+    background-color: #ff3366;
+    border-color: #ff3336;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+}
+.sexo{
+    font-size: 50px;
+}
+.estiloNumero{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: -30px;
+}
+.cms{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.form-range{
+    padding: 0px 20px;
+}
+.range-cust::-webkit-slider-thumb{
+    background: #ff3366;
+}
+.range-cust::-moz-range-thumb{
+    background: #ff3366;
+}
+.range-cust::-ms-thumb{
+    background: #ff3366;
+}
+.sumaResta{
+    cursor: pointer;
+    background-color: #ff4372b4;
+    padding: 7px;
+    border-radius: 15px;
+    margin-left: 7px;
+}
+.sexoDesactivado{
+    background-color: rgba(216, 62, 65, 0.637);
+}
