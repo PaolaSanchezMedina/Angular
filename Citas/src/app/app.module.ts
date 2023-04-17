@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CrearCitasComponent } from './components/crear-citas/crear-citas.component';
 import { ListCitasComponent } from './components/list-citas/list-citas.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
