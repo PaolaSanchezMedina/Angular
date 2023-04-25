@@ -1,3 +1,4 @@
+import { EmpleadoListComponent } from "../components/empleado-list/empleado-list.component";
 export class Empleado{
     No: number=0;
     RFC: string='';

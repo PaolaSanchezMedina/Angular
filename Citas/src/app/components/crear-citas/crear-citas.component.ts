@@ -42,9 +42,9 @@ export class CrearCitasComponent {
   }
   //Inicializamos
   resetCampos(){
-    this.nombre = ' ';
-    this.fecha = ' ';
-    this.hora = ' ';
-    this.sintomas = ' ';
+    this.nombre = '';
+    this.fecha = '';
+    this.hora = '';
+    this.sintomas = '';
   }
 }

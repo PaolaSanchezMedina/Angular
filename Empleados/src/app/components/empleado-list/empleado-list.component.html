@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let empleado of listEmpleados">
-                        <tr *ngIf="radioBottonSeleccionado=='empleados' || radioBottonSeleccionado==empleado.Sexo">
+                        <tr *ngIf="radioBottonSeleccionado=='femenino' || radioBottonSeleccionado==empleado.Sexo">
                             <td> {{ empleado.No }} </td>
                             <td> {{ empleado.RFC }} </td>
                             <td> {{ empleado.Nombre }} </td>
