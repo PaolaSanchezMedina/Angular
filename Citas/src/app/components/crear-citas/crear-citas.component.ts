@@ -31,6 +31,7 @@ export class CrearCitasComponent {
     //Creamos un objeto para enviarselo al padre
     const CITA =
     {
+      combo: this.nombre + this.fecha,
       nombre: this.nombre,
       fecha: this.fecha,
       hora: this.hora,

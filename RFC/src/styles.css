@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../src/assets/img/flores.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+.texto{
+    font-family: 'Poltawski Nowy';
+}
+.fuente{
+    font-weight: 600;
+}

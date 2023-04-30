@@ -1,0 +1,25 @@
+<div class="card bg-ligh">
+    <div class="card-body text-primary">
+        <h5 class="card-title text-center fuente">RFC</h5>
+        <div *ngIf="formularioIncorrecto" class="text-center">
+            <span class="badge text-light text-bg-info fuente">CAMPOS SON OBLIGARIOS</span>
+        </div>
+        <div class="form-group fuente">
+            <label for="nombre" class="">Nombre</label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" class="form-control" placeholder="Ingresar nombre">
+        </div>
+        <div class="form-group fuente mt-2">
+            <label for="Primer apellido" class="">Primer apellido</label>
+            <input type="text" name="primerApellido" id="primerApellido" [(ngModel)]="primerApellido"  class="form-control" placeholder="Ingresar primer apellido">
+        </div>
+        <div class="form-group fuente mt-2">
+            <label for="Segundo apellido" class="">Segundo apellido</label>
+            <input type="text" name="segundoApellido" id="segundoApellido" [(ngModel)]="segundoApellido" class="form-control" placeholder="Ingresar segundo apellido">
+        </div>
+        <div class="form-group fuente mt-2">
+            <label for="fecha" class="">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha" [(ngModel)]="fecha" class="form-control" placeholder="1998/12/31">
+        </div>
+        <button style="width: 100%;" (click)="agregarRFC()" class="btn btn-block bg-primary text-light mt-3 fuente">Ver RFC</button>
+    </div>
+</div>  

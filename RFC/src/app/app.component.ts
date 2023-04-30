@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RFC';
+  listRFC: any[]=[];
+  agregarRFC(rfc: any){
+    this.listRFC.push(rfc);
+  }
+  eliminarRFClistado(index: number){
+    this.listRFC.splice(index, 1);
+  }
 }
