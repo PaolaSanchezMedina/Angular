@@ -650,16 +650,19 @@ export class CrearRfcComponent {
     
     aux21 = Math.floor(aux20%11); //Residuo
     aux22 = 11 - aux21;
-    // console.log(aux21);
-    // console.log(aux22);
+    console.log(aux21);
+    console.log(aux22);
     if(aux21 = 0){
       aux22 = 0;
     }
+
+    var primerosCuatro = aux4;
+    var fechaNacimiento = anio + mes + dia;
+    var homoclaveDigitos = aux14 + aux15;
+    var claveDiferenciadora = aux22;
     
-
-
-    this.rfc = aux4 + '-' + anio + mes + dia + aux14 + aux15 + aux22;
-
+    this.rfc = primerosCuatro + '-' + fechaNacimiento + homoclaveDigitos + claveDiferenciadora;
+    
     //Creamos un objeto para enviarselo al padre
     const RFCNuevo =
     {
