@@ -1,10 +1,7 @@
 <div>
     <div *ngFor="let rfc of listadoRFC; let i = index"  class=" card bg-body p-3 text-primary fuente">
-        <p class="card-text"><span>RFC:</span>{{rfc.rfc}}</p>
-        <p class="card-text"><span>Nombre:</span>{{rfc.nombre}}</p>
-        <p class="card-text"><span>Primer apellido:</span>{{rfc.primerApellido}}</p>
-        <p class="card-text"><span>Segundo apellido:</span>{{rfc.segundoApellido}}</p>
-        <p class="card-text"><span>Fecha de nacimiento:</span>{{rfc.fecha}}</p>
+        <p class="card-text"><span>RFC: </span>{{rfc.rfc}}</p>
+        <p class="card-text"><span>Nombre: </span>{{rfc.nombre}}</p>
         <button style="width: 100%;" (click)="eliminarRFC(i)" class="btn bg-primary btn-block text-light fuente">Quitar</button>
     </div>
 </div> 
