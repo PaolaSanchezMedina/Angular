@@ -232,10 +232,10 @@ export class EmpleadoListComponent {
   obtenerEmpleados(sex: string): number
   {
     if(sex=='femenino'){
-      return this.listEmpleados.filter(list => list.Sexo==='femenino').length;
+      return this.listEmpleados.filter(list => list.Sexo==='femenino').length
     }
     if(sex=='masculino'){
-      return this.listEmpleados.filter(list => list.Sexo==='masculino').length;
+      return this.listEmpleados.filter(list => list.Sexo==='masculino').length
     }
     return this.listEmpleados.length;
   }
@@ -246,6 +246,14 @@ export class EmpleadoListComponent {
     'empleados'
   ];
   radioChangeHandler (event:any){
-    this.genero=event.target.value;
+    this.radioBottonSeleccionado = event.target.value;
+  }
+
+  obtenerTotalFemeninos(): number {
+    return this.listEmpleados.filter(list => list.Sexo === 'femenino').length;
+  }
+
+  obtenerTotalMasculinos(): number {
+    return this.listEmpleados.filter(list => list.Sexo === 'masculino').length;
   }
 }
